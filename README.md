@@ -30,7 +30,7 @@ You can use the following format to set an alert on any application if it goes d
     labels:
       severity: "critical"
     annotations:
-      summary: "VSFTPD is down on NDOC machine"
+      summary: "FTP service is down"
 ```
 
 
