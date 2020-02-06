@@ -19,9 +19,18 @@ Below are the additional lines added in the generator file
       - source_indexes: [hrSWRunIndex]
         lookup: hrSWRunStatus
 ```
-# SNMP Exporter image
-On snmp_exporter webpage, select the module hr_mib
-![snmp_exporter](snmp_exporter.png)
+# Prometheus Alert Rules
 
-Output will look like the below
-![Output](Output.png)
+You can use the following format to set an alert on any application if it goes down
+
+```YAML
+  - alert: ApplicationDown
+    expr: absent(hrSWRunName{hrSWRunName="vsftpd"}) == 1
+    for: 10s
+    labels:
+      severity: "critical"
+    annotations:
+      summary: "VSFTPD is down on NDOC machine"
+```
+
+
