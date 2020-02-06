@@ -19,3 +19,9 @@ Below are the additional lines added in the generator file
       - source_indexes: [hrSWRunIndex]
         lookup: hrSWRunStatus
 ```
+# SNMP Exporter image
+On snmp_exporter webpage, select the module hr_mib
+![snmp_exporter](snmp_exporter.png)
+
+Output will look like the below
+![Output](Output.png)
