@@ -6,3 +6,16 @@ Using snmp_exporter, use hr_mib module to get the list of running processes on a
 
 You are welcome to modify this generator file for your needs
 
+# Module
+
+Below are the additional lines added in the generator file
+
+```YAML
+  hr_mib:
+    walk: [1.3.6.1.2.1.25.4.2.1.2]
+    lookups:
+      - source_indexes: [hrSWRunIndex]
+        lookup: hrSWRunName
+      - source_indexes: [hrSWRunIndex]
+        lookup: hrSWRunStatus
+```
